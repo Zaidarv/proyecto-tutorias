@@ -1,1 +1,5 @@
-console.log("Hello, world2!");
+import app from "./app.js";
+
+app.listen(3000);
+
+console.log("server started on port ", 3000);
