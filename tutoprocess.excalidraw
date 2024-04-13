@@ -127,8 +127,8 @@
     },
     {
       "type": "text",
-      "version": 3217,
-      "versionNonce": 1806332783,
+      "version": 3221,
+      "versionNonce": 713364686,
       "isDeleted": false,
       "id": "CS1GMvoq6ALGk641bIjxV",
       "fillStyle": "solid",
@@ -151,7 +151,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1712024188703,
+      "updated": 1712597964749,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -162,7 +162,7 @@
       "containerId": null,
       "originalText": "coordinador institucional",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "ellipse",
@@ -288,8 +288,8 @@
     },
     {
       "type": "text",
-      "version": 3398,
-      "versionNonce": 1358692097,
+      "version": 3402,
+      "versionNonce": 2073945874,
       "isDeleted": false,
       "id": "6AkS31WXQoCB9ujlLfeoz",
       "fillStyle": "solid",
@@ -312,7 +312,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1712024188704,
+      "updated": 1712597964750,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -323,12 +323,12 @@
       "containerId": null,
       "originalText": "coordinador academico",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 475,
-      "versionNonce": 1275604367,
+      "version": 479,
+      "versionNonce": 48581390,
       "isDeleted": false,
       "id": "j8UajG-18CN1NwHzqcNCJ",
       "fillStyle": "solid",
@@ -348,7 +348,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1712024188710,
+      "updated": 1712597964752,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -359,12 +359,12 @@
       "containerId": null,
       "originalText": "asigna tutores\nasigna tutorados\nasigna PAT (crea grupos de tutores y tutorados)\nVisualiza reportes de tutores y retroalimenta\nPresenta areas de canalizacion (Genera Reporte semestral)\naprueba credito complementario",
       "lineHeight": 1.25,
-      "baseline": 143
+      "baseline": 142
     },
     {
       "type": "text",
-      "version": 222,
-      "versionNonce": 2047244001,
+      "version": 226,
+      "versionNonce": 20133074,
       "isDeleted": false,
       "id": "vTn368oBz5hR7eQrPqGw1",
       "fillStyle": "solid",
@@ -384,7 +384,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1712024188711,
+      "updated": 1712597964753,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -395,7 +395,7 @@
       "containerId": null,
       "originalText": "designa coordinador academico",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "ellipse",
@@ -521,8 +521,8 @@
     },
     {
       "type": "text",
-      "version": 3880,
-      "versionNonce": 1760142255,
+      "version": 3884,
+      "versionNonce": 1181006158,
       "isDeleted": false,
       "id": "he0c4yWtKCSArbHR5Yg_-",
       "fillStyle": "solid",
@@ -545,7 +545,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1712024188711,
+      "updated": 1712597964754,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -556,12 +556,12 @@
       "containerId": null,
       "originalText": "tutor",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 1171,
-      "versionNonce": 783741633,
+      "version": 1175,
+      "versionNonce": 1247333010,
       "isDeleted": false,
       "id": "cHixuxmKiVP4SoOt60NZ1",
       "fillStyle": "solid",
@@ -581,7 +581,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1712024188712,
+      "updated": 1712597964755,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -592,7 +592,7 @@
       "containerId": null,
       "originalText": "crea PAT (seguimiento de sesiones)\nreporte periodico\n",
       "lineHeight": 1.25,
-      "baseline": 68
+      "baseline": 67
     },
     {
       "type": "ellipse",
@@ -718,8 +718,8 @@
     },
     {
       "type": "text",
-      "version": 4124,
-      "versionNonce": 1920423375,
+      "version": 4128,
+      "versionNonce": 1012686734,
       "isDeleted": false,
       "id": "9nRLjUCJboPpOgbojHY4W",
       "fillStyle": "solid",
@@ -742,7 +742,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1712024188713,
+      "updated": 1712597964755,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -753,12 +753,12 @@
       "containerId": null,
       "originalText": "tutorado",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 1377,
-      "versionNonce": 330101409,
+      "version": 1381,
+      "versionNonce": 231057490,
       "isDeleted": false,
       "id": "svQ38FB6p-_VuPTppjBCs",
       "fillStyle": "solid",
@@ -778,7 +778,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1712024188715,
+      "updated": 1712597964756,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -789,7 +789,7 @@
       "containerId": null,
       "originalText": "visualiza su grupo y sesiones",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     }
   ],
   "appState": {
