@@ -17,6 +17,7 @@ CREATE TABLE usuarios (
   nombre_usuario VARCHAR(100) NOT NULL,
   status_usuario SMALLINT NOT NULL,
   id_rol INT NULL,
+  contrasena INT NOT NULL DEFAULT 9999,
   FOREIGN KEY (id_rol) REFERENCES roles (id_rol),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

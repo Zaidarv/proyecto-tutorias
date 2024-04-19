@@ -10,7 +10,7 @@ import { isAuth } from "../middlewares/auth.middleware.js"; //?add middleware
 
 const router = Router();
 
-router.get("/usuarios", getAllUsuarios);
+router.get("/usuarios", isAuth, getAllUsuarios);
 router.get("/usuarios/:id", getUsuario);
 router.post("/usuarios", createUsuario);
 router.put("/usuarios/:id", updateUsuario);
