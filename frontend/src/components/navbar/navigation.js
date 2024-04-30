@@ -1,6 +1,9 @@
-export const navigation = [
+export const publicRoutes = [
   { name: "Inicio", href: "/", current: true },
   { name: "Login", href: "/login", current: false },
+];
+
+export const privateRoutes = [
   { name: "Usuarios", href: "/usuarios", current: false },
   { name: "Tutorados", href: "/tutorados", current: false },
   { name: "Informacion", href: "/informacion", current: false },

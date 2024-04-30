@@ -1,10 +1,12 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { navigation } from "./navigation";
+import { publicRoutes, privateRoutes } from "./navigation";
 import { Container } from "../ui/Container";
+import { useAuth } from "../../context/AuthContext";
 
 function Navbar() {
   const location = useLocation();
+  const { isAuth, logout } = useAuth();
 
   return (
     <nav className=" bg-blue-950">
@@ -14,17 +16,41 @@ function Navbar() {
         </Link>
 
         <ul className=" flex gap-x-2">
-          {navigation.map(({ name, href }) => (
-            <li
-              className={` text-white ${
-                location.pathname === href &&
-                "bg-white px-3 py-1 text-blue-950 font-bold"
-              }`}
-              key={href}
-            >
-              <Link to={href}>{name}</Link>
-            </li>
-          ))}
+          {isAuth ? (
+            <>
+              {privateRoutes.map(({ name, href }) => (
+                <li
+                  className={` text-white ${
+                    location.pathname === href &&
+                    "bg-white px-3 py-1 text-blue-950 font-bold"
+                  }`}
+                  key={href}
+                >
+                  <Link to={href}>{name}</Link>
+                </li>
+              ))}
+              <li
+                className=" text-white"
+                onClick={() => {
+                  logout();
+                }}
+              >
+                Logout
+              </li>
+            </>
+          ) : (
+            publicRoutes.map(({ name, href }) => (
+              <li
+                className={` text-white ${
+                  location.pathname === href &&
+                  "bg-white px-3 py-1 text-blue-950 font-bold"
+                }`}
+                key={href}
+              >
+                <Link to={href}>{name}</Link>
+              </li>
+            ))
+          )}
         </ul>
       </Container>
     </nav>

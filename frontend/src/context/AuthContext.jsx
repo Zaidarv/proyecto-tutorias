@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
       setIsAuth(true);
       return res.data;
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       if (Array.isArray(error.response.data)) {
         return setErrors(error.response.data);
       }
@@ -33,17 +33,23 @@ export function AuthProvider({ children }) {
     }
   };
 
+  const logout = async () => {
+    await axios.post("/logout");
+    setUser(null);
+    setIsAuth(false);
+  };
+
   useEffect(() => {
     if (Cookie.get("token")) {
       axios
         .get("/profile")
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           setUser(res.data);
           setIsAuth(true);
         })
         .catch((err) => {
-          console.log(err);
+          // console.log(err);
           setUser(null);
           setIsAuth(false);
         });
@@ -57,6 +63,7 @@ export function AuthProvider({ children }) {
         isAuth,
         errors,
         login,
+        logout,
       }}
     >
       {children}
