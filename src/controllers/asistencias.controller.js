@@ -1,5 +1,4 @@
 import { pool } from "../db.js";
-import { createAccessToken } from "../libs/jwt.js";
 
 export const getAllAsistencias = async (req, res) => {
   const result = await pool.query("SELECT * FROM public.asistencias ");
@@ -29,19 +28,19 @@ export const createAsistencia = async (req, res) => {
   );
   return res.json({
     message: "Asistencia creada",
-    sesion: result.rows[0],
+    asistencia: result.rows[0],
   });
 };
 export const updateAsistencia = async (req, res) => {
   const { id_sesion, no_de_control, asistencia } = req.body;
 
   const result = await pool.query(
-    "UPDATE public.asistencias SET id_sesion = $1, no_de_control = $2, asistencia = $3 RETURNING *",
-    [id_sesion, no_de_control, asistencia]
+    "UPDATE public.asistencias SET id_sesion = $1, no_de_control = $2, asistencia = $3 WHERE id_asistencia = $4 RETURNING *",
+    [id_sesion, no_de_control, asistencia, req.params.id]
   );
   return res.json({
     message: "Asistencia actualizada",
-    sesion: result.rows[0],
+    asistencia: result.rows[0],
   });
 };
 

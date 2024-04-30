@@ -36,8 +36,8 @@ export const updateGrupo = async (req, res) => {
   const { rfc, nombre_grupo } = req.body;
 
   const result = await pool.query(
-    "UPDATE public.grupos SET rfc = $1, nombre_grupo = $2 RETURNING *",
-    [rfc, nombre_grupo]
+    "UPDATE public.grupos SET rfc = $1, nombre_grupo = $2 WHERE id_grupo = $3 RETURNING *",
+    [rfc, nombre_grupo, req.params.id]
   );
   return res.json({ message: "Grupo actualizado", grupo: result.rows[0] });
 };

@@ -10,25 +10,33 @@ function LoginPage() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { login } = useAuth();
+  const { login, errors: loginErrors } = useAuth();
   const navigate = useNavigate();
   const onSubmit = handleSubmit(async (data) => {
-    await login(data);
-    navigate("/");
+    const user = await login(data);
+    if (user) {
+      navigate("/");
+    }
   });
 
   return (
     <div className="h-[calc(100vh-64px)] flex items-center justify-center">
       <Card>
+        {loginErrors && (
+          <div
+            className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+            role="alert"
+          >
+            <strong className="font-bold">Error!</strong>
+            <span className="block sm:inline"> {loginErrors[0]}</span>
+          </div>
+        )}
         <h3 className="text-2xl font-bold">Inicio de Sesión</h3>
 
         <form onSubmit={onSubmit}>
-          <Label htmlFor="usuario">Usuario</Label>
-          <Input
-            placeholder="Usuario"
-            {...register("usuario", { required: true })}
-          />
-          {errors.usuario && (
+          <Label htmlFor="rfc">Usuario</Label>
+          <Input placeholder="rfc" {...register("rfc", { required: true })} />
+          {errors.rfc && (
             <span className="text-red-500">Este campo es requerido</span>
           )}
 

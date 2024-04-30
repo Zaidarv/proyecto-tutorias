@@ -36,8 +36,8 @@ export const updateSesion = async (req, res) => {
   const { id_grupo, actividad, fecha, hora, lugar, observaciones } = req.body;
 
   const result = await pool.query(
-    "UPDATE public.sesiones SET id_grupo = $1, actividad = $2, fecha = $3, hora = $4, lugar = $5, observaciones = $6 RETURNING *",
-    [id_grupo, actividad, fecha, hora, lugar, observaciones]
+    "UPDATE public.sesiones SET id_grupo = $1, actividad = $2, fecha = $3, hora = $4, lugar = $5, observaciones = $6 WHERE id_sesion = $7 RETURNING *",
+    [id_grupo, actividad, fecha, hora, lugar, observaciones, req.params.id]
   );
   return res.json({ message: "sesion actualizada", sesion: result.rows[0] });
 };

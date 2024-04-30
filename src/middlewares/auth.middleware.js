@@ -11,7 +11,7 @@ export const isAuth = async (req, res, next) => {
       return res.status(401).json({ message: "Token inválido" });
     }
 
-    req.usuario = decoded;
+    req.rfc = decoded;
     console.log(decoded);
     next();
   });

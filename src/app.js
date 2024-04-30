@@ -6,6 +6,9 @@ import gruposRoutes from "./routes/grupos.routes.js";
 import sesionesRoutes from "./routes/sesiones.routes.js";
 import asistenciasRoutes from "./routes/asistencias.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import cuestionariosRoutes from "./routes/cuestionarios.routes.js";
+import preguntasRoutes from "./routes/preguntas.routes.js";
+import respuestasRoutes from "./routes/respuestas.routes.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
@@ -23,6 +26,9 @@ app.use("/api", gruposRoutes);
 app.use("/api", sesionesRoutes);
 app.use("/api", asistenciasRoutes);
 app.use("/api", authRoutes);
+app.use("/api", cuestionariosRoutes);
+app.use("/api", preguntasRoutes);
+app.use("/api", respuestasRoutes);
 
 app.get("/", (req, res) => {
   res.json({ message: "Hello World 2" });

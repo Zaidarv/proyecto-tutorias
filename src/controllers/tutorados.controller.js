@@ -63,7 +63,7 @@ export const updateTutorado = async (req, res) => {
   } = req.body;
 
   const result = await pool.query(
-    "UPDATE public.tutorados SET carrera = $1, semestre = $2, apellido_paterno = $3, apellido_materno = $4, nombre_tutorado = $5, status_usuario = $6 RETURNING *",
+    "UPDATE public.tutorados SET carrera = $1, semestre = $2, apellido_paterno = $3, apellido_materno = $4, nombre_tutorado = $5, status_usuario = $6 WHERE no_de_control = $7 RETURNING * ",
     [
       carrera,
       semestre,
@@ -71,6 +71,7 @@ export const updateTutorado = async (req, res) => {
       apellido_materno,
       nombre_tutorado,
       periodo_status,
+      req.params.id,
     ]
   );
   return res.json({ message: "Usuario actualizado", usuario: result.rows[0] });

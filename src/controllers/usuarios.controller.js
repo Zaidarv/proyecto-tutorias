@@ -38,7 +38,8 @@ export const createUsuario = async (req, res) => {
   const token = await createAccessToken({ rfc: result.rows[0].rfc });
 
   res.cookie("token", token, {
-    httpOnly: true,
+    // httpOnly: true,
+    secure: true,
     sameSite: "none",
     maxAge: 1000 * 60 * 60 * 24, // 1 day
   });
@@ -54,8 +55,15 @@ export const updateUsuario = async (req, res) => {
   } = req.body;
 
   const result = await pool.query(
-    "UPDATE public.usuarios SET clave_area = $1, apellidos_usuario = $2, nombre_usuario = $3, status_usuario = $4, id_rol = $5 RETURNING *",
-    [clave_area, apellidos_usuario, nombre_usuario, status_usuario, id_rol]
+    "UPDATE public.usuarios SET clave_area = $1, apellidos_usuario = $2, nombre_usuario = $3, status_usuario = $4, id_rol = $5 WHERE rfc = $6 RETURNING *",
+    [
+      clave_area,
+      apellidos_usuario,
+      nombre_usuario,
+      status_usuario,
+      id_rol,
+      req.params.id,
+    ]
   );
   return res.json({ message: "Usuario actualizado", usuario: result.rows[0] });
 };

@@ -17,7 +17,7 @@ CREATE TABLE usuarios (
   nombre_usuario VARCHAR(100) NOT NULL,
   status_usuario SMALLINT NOT NULL,
   id_rol INT NULL,
-  contrasena INT NOT NULL DEFAULT 9999,
+  contrasena VARCHAR(4) NOT NULL DEFAULT '9999',
   FOREIGN KEY (id_rol) REFERENCES roles (id_rol),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -71,4 +71,41 @@ CREATE TABLE asistencias (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-```
+
+CREATE TABLE cuestionarios (
+  id_cuestionario SERIAL PRIMARY KEY,
+  nombre_cuestionario VARCHAR(100) NOT NULL,
+  descripcion TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+
+CREATE TABLE preguntas (
+  id_pregunta SERIAL PRIMARY KEY,
+  id_cuestionario INT NOT NULL,
+  pregunta TEXT NOT NULL,
+  tipo_pregunta VARCHAR(30) NULL,
+  FOREIGN KEY (id_cuestionario) REFERENCES cuestionarios (id_cuestionario)
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+);
+
+CREATE TABLE respuestas (
+  id_respuesta SERIAL PRIMARY KEY,
+  id_pregunta INT NOT NULL,
+  respuesta TEXT NOT NULL,
+  FOREIGN KEY (id_pregunta) REFERENCES preguntas (id_pregunta),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE cuestionarios_tutorados (
+  id_cuestionario INT NOT NULL,
+  no_de_control VARCHAR(11) NOT NULL,
+  fecha_aplicacion DATE NOT NULL,
+  FOREIGN KEY (id_cuestionario) REFERENCES cuestionarios (id_cuestionario),
+  FOREIGN KEY (no_de_control) REFERENCES tutorados (no_de_control),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
