@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Card, Input, Button, Label } from "../components/ui";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
+import { Container } from "../components/ui";
 
 function LoginPage() {
   const {
@@ -20,7 +21,7 @@ function LoginPage() {
   });
 
   return (
-    <div className="h-[calc(100vh-64px)] flex items-center justify-center">
+    <Container className="h-[calc(100vh-10rem)] flex items-center justify-center">
       <Card>
         {loginErrors && (
           <div
@@ -53,7 +54,7 @@ function LoginPage() {
           <Button>Iniciar Sesión</Button>
         </form>
       </Card>
-    </div>
+    </Container>
   );
 }
 
