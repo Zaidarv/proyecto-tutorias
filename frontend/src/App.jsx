@@ -10,11 +10,12 @@ import InicioPage from "./pages/InicioPage";
 import LoginPage from "./pages/LoginPage";
 import UsuariosPage from "./pages/UsuariosPage";
 import TutoradosPage from "./pages/TutoradosPage";
-import InformacionPage from "./pages/InformacionPage";
 import GruposPage from "./pages/GruposPage";
 import SesionesPage from "./pages/SesionesPage";
 import AsistenciasPage from "./pages/AsistenciasPage";
 import NotFound from "./pages/NotFound";
+import CoordInstitucionalPage from "./pages/CoordInstitucionalPage";
+import CarreraPage from "./pages/CarreraPage";
 
 function App() {
   const { isAuth } = useAuth();
@@ -39,6 +40,8 @@ function App() {
             element={<ProtectedRoute isAllowed={isAuth} redirectTo="/login" />}
           >
             <Route path="/usuarios" element={<UsuariosPage />} />
+            <Route path="/carreras" element={<CoordInstitucionalPage />} />
+            <Route path="/carreras/:id" element={<CarreraPage />} />
             <Route path="/tutorados" element={<TutoradosPage />} />
             <Route path="/grupos" element={<GruposPage />} />
             <Route path="/sesiones" element={<SesionesPage />} />

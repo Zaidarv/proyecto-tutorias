@@ -22,7 +22,7 @@ function Navbar() {
                 <li
                   className={` text-white ${
                     location.pathname === href &&
-                    "bg-white px-3 py-1 text-blue-950 font-bold"
+                    " bg-white px-3 py-1 text-black font-bold"
                   }`}
                   key={href}
                 >
@@ -43,7 +43,7 @@ function Navbar() {
               <li
                 className={` text-white ${
                   location.pathname === href &&
-                  "bg-white px-3 py-1 text-blue-950 font-bold"
+                  "bg-white px-3 py-1 text-black font-bold"
                 }`}
                 key={href}
               >

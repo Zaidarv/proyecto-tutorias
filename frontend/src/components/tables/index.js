@@ -1,0 +1,1 @@
+export { BasicDatatable } from "./BasicDatatable";
