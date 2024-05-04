@@ -2,6 +2,7 @@ import express, { json } from "express";
 import morgan from "morgan";
 import usuarioRoutes from "./routes/usuarios.routes.js";
 import tutoradoRoutes from "./routes/tutorados.routes.js";
+import coordinadoresCarrerasRoutes from "./routes/coordinadores_carreras.routes.js";
 import gruposRoutes from "./routes/grupos.routes.js";
 import sesionesRoutes from "./routes/sesiones.routes.js";
 import asistenciasRoutes from "./routes/asistencias.routes.js";
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api", usuarioRoutes);
 app.use("/api", tutoradoRoutes);
+app.use("/api", coordinadoresCarrerasRoutes);
 app.use("/api", gruposRoutes);
 app.use("/api", sesionesRoutes);
 app.use("/api", asistenciasRoutes);

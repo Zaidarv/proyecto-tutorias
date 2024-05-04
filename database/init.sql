@@ -23,9 +23,9 @@ CREATE TABLE usuarios (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE coordinador_carrera (
-  id_carrera INT NOT NULL ,
-  rfc VARCHAR(15)  NULL PRIMARY KEY,
+CREATE TABLE coordinadores_carreras (
+  id_carrera VARCHAR(4) NOT NULL ,
+  rfc VARCHAR(15) NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

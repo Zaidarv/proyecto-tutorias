@@ -1,6 +1,8 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
+
 import { useAuth } from "./context/AuthContext";
+import { CarreraProvider } from "./context/CarreraContext";
 
 import Navbar from "./components/navbar/Navbar";
 import { Container } from "./components/ui";
@@ -40,8 +42,18 @@ function App() {
             element={<ProtectedRoute isAllowed={isAuth} redirectTo="/login" />}
           >
             <Route path="/usuarios" element={<UsuariosPage />} />
-            <Route path="/carreras" element={<CoordInstitucionalPage />} />
-            <Route path="/carreras/:id" element={<CarreraPage />} />
+
+            <Route
+              element={
+                <CarreraProvider>
+                  <Outlet />
+                </CarreraProvider>
+              }
+            >
+              <Route path="/carreras" element={<CoordInstitucionalPage />} />
+              <Route path="/carreras/:id" element={<CarreraPage />} />
+            </Route>
+
             <Route path="/tutorados" element={<TutoradosPage />} />
             <Route path="/grupos" element={<GruposPage />} />
             <Route path="/sesiones" element={<SesionesPage />} />

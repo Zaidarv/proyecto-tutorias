@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { getAllCarreras } from "../api/carreras.api";
+import { useEffect } from "react";
 import { BasicDatatable } from "../components/tables";
 import { Link } from "react-router-dom";
+import { useCarreras } from "../context/CarreraContext";
 
 const title = "CARRERAS";
 const columns = [
@@ -34,7 +34,7 @@ const columns = [
 ];
 
 const options = {
-  selectableRows: false,
+  selectableRows: "none",
   textLabels: {
     body: {
       noMatch: "Lo sentimos, no se encontraron registros",
@@ -78,13 +78,10 @@ const options = {
 };
 
 function CoordInstitucionalPage() {
-  const [carreras, setCarreras] = useState([]);
+  const { carreras, loadCarreras } = useCarreras();
 
   useEffect(() => {
-    getAllCarreras().then((response) => {
-      setCarreras(response.data);
-      console.log(response.data);
-    });
+    loadCarreras();
   }, []);
 
   return (
