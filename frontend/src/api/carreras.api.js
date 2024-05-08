@@ -6,4 +6,14 @@ export const getAllCarreras = async () =>
 export const getCarrera = async (id) =>
   axios.get(`http://localhost:4000/api/carreras/${id}`);
 
-//! Get carrera, now is undifined
+export const getAllCoordinadores = async () =>
+  axios.get("http://localhost:4000/api/docentes");
+
+export const checkCoordinador = async (id) =>
+  axios.get(`http://localhost:3000/api/coordinadores-carreras/${id}`);
+
+export const getCoordinador = async (id) =>
+  axios.get(`http://localhost:4000/api/docentes/${id}`);
+
+export const createCarrera = async (data) =>
+  axios.post("http://localhost:3000/api/coordinadores-carreras", data);

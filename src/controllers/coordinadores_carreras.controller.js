@@ -22,14 +22,14 @@ export const getCoordinadorCarrera = async (req, res) => {
 };
 
 export const createCoordinadorCarrera = async (req, res) => {
-  const { id_carrera, rfc } = req.body;
+  const { id_carrera } = req.body;
 
   const result = await pool.query(
-    "INSERT INTO public.coordinadores_carreras (id_carrera, rfc) VALUES ($1, $2) RETURNING *",
-    [id_carrera, rfc]
+    "INSERT INTO public.coordinadores_carreras (id_carrera) SELECT CAST($1 AS VARCHAR) WHERE NOT EXISTS (SELECT * FROM public.coordinadores_carreras WHERE id_carrera = $1)  RETURNING *",
+    [id_carrera]
   );
   return res.json({
-    message: "Coordinador asignado",
+    message: "Carrera registrada",
     coordinador: result.rows[0],
   });
 };

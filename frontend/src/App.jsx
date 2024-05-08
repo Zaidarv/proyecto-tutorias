@@ -17,6 +17,7 @@ import SesionesPage from "./pages/SesionesPage";
 import AsistenciasPage from "./pages/AsistenciasPage";
 import NotFound from "./pages/NotFound";
 import CoordInstitucionalPage from "./pages/CoordInstitucionalPage";
+import CoordInstitucionalFormPage from "./pages/CoordInstitucionalFormPage";
 import CarreraPage from "./pages/CarreraPage";
 
 function App() {
@@ -52,6 +53,10 @@ function App() {
             >
               <Route path="/carreras" element={<CoordInstitucionalPage />} />
               <Route path="/carreras/:id" element={<CarreraPage />} />
+              <Route
+                path="/carreras/:id/asignar-coordinador"
+                element={<CoordInstitucionalFormPage />}
+              />
             </Route>
 
             <Route path="/tutorados" element={<TutoradosPage />} />

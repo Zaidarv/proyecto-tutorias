@@ -86,16 +86,16 @@ CREATE TABLE cuestionarios (
   descripcion TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)
+);
 
 CREATE TABLE preguntas (
   id_pregunta SERIAL PRIMARY KEY,
   id_cuestionario INT NOT NULL,
   pregunta TEXT NOT NULL,
   tipo_pregunta VARCHAR(30) NULL,
-  FOREIGN KEY (id_cuestionario) REFERENCES cuestionarios (id_cuestionario)
+  FOREIGN KEY (id_cuestionario) REFERENCES cuestionarios (id_cuestionario),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE respuestas (
