@@ -6,6 +6,7 @@ import {
   createCarrera,
   checkCoordinador,
   getCoordinador,
+  updateCoordinador,
 } from "../api/carreras.api";
 
 const CarreraContext = createContext();
@@ -64,6 +65,10 @@ export const CarreraProvider = ({ children }) => {
       }
     }
   };
+  const updateCoordinadorCarrera = async (id, data) => {
+    const res = await updateCoordinador(id, data);
+    console.log(res.data);
+  };
 
   return (
     <CarreraContext.Provider
@@ -76,6 +81,7 @@ export const CarreraProvider = ({ children }) => {
         loadCarrera,
         loadCoordinadores,
         loadCoordinador,
+        updateCoordinadorCarrera,
       }}
     >
       {children}

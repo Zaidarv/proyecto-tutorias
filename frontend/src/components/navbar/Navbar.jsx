@@ -22,7 +22,7 @@ function Navbar() {
                 <li
                   className={` text-white ${
                     location.pathname === href &&
-                    " bg-white px-3 py-1 text-black font-bold"
+                    " text-black bg-white px-3 py-1 "
                   }`}
                   key={href}
                 >
@@ -42,8 +42,7 @@ function Navbar() {
             publicRoutes.map(({ name, href }) => (
               <li
                 className={` text-white ${
-                  location.pathname === href &&
-                  "bg-white px-3 py-1 text-black font-bold"
+                  location.pathname === href && "bg-white px-3 py-1 text-black"
                 }`}
                 key={href}
               >

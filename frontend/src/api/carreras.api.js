@@ -17,3 +17,6 @@ export const getCoordinador = async (id) =>
 
 export const createCarrera = async (data) =>
   axios.post("http://localhost:3000/api/coordinadores-carreras", data);
+
+export const updateCoordinador = async (id, data) =>
+  axios.put(`http://localhost:3000/api/coordinadores-carreras/${id}`, data);

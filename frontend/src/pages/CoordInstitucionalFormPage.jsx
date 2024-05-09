@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Container, Button } from "../components/ui";
 import { useCarreras } from "../context/CarreraContext";
 import { useEffect } from "react";
 import { BasicDatatable } from "../components/tables";
 import { useParams, Link } from "react-router-dom";
+import { updateCoordinador } from "../api/carreras.api";
+import { set } from "zod";
 
 function CoordInstitucionalFormPage() {
   const { carrera, coordinadores, loadCoordinadores } = useCarreras();
+  const [selectedRow, setSelectedRow] = useState(null);
   const { id } = useParams();
   useEffect(() => {
     loadCoordinadores();
   }, []);
 
-  const handleRowSelection = (currentRowsSelected, allRowsSelected) => {
-    console.log(currentRowsSelected, allRowsSelected);
+  const handleInsertButtonClick = () => {
+    // useEffect(() => {
+    //   updateCoordinador(id, );
+    // }, []);
+    console.log("Insertar coordinador", selectedRow);
   };
-
   const title = "SELECCIONAR COORDINADOR ACADÉMICO";
   const columns = [
     {
@@ -45,9 +50,11 @@ function CoordInstitucionalFormPage() {
 
   const options = {
     selectableRows: "single",
-    onRowsSelectionChange: handleRowSelection,
+    onRowsSelectionChange: (row) => setSelectedRow(row),
     customToolbarSelect: () => {
-      return <Button>Asignar coordinador</Button>;
+      return (
+        <Button onClick={handleInsertButtonClick}>Asignar coordinador</Button>
+      );
     },
 
     download: false,
