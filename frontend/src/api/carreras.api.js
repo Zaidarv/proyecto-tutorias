@@ -20,3 +20,7 @@ export const createCarrera = async (data) =>
 
 export const updateCoordinador = async (id, data) =>
   axios.put(`http://localhost:3000/api/coordinadores-carreras/${id}`, data);
+
+//USUARIOS
+export const createUsuario = async (data) =>
+  axios.post("http://localhost:3000/api/usuarios", data);

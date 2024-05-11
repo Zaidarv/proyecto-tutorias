@@ -22,6 +22,10 @@ const columns = [
     label: "SIGLAS",
   },
   {
+    name: "coordinador",
+    label: "COORDINADOR",
+  },
+  {
     name: "actions",
     label: "Acciones",
     options: {
@@ -79,6 +83,8 @@ const options = {
 
 function CoordInstitucionalPage() {
   const { carreras, loadCarreras } = useCarreras();
+
+  // !pendiente agregar la columna donde confirma coordinador asignado
 
   useEffect(() => {
     loadCarreras();

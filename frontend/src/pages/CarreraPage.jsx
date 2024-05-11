@@ -59,12 +59,11 @@ function CarreraPage() {
   return (
     <Container className="h-[calc(100vh-10rem)] items-center justify-center">
       <Card className="">
-        <h1>{carrera?.nombre_carrera}</h1>
         <Link to={`/carreras/${id}/asignar-coordinador`}>
           <Button>Seleccionar coordinador</Button>
         </Link>
         <BasicDatatable
-          title={title}
+          title={title + " DE " + carrera?.nombre_carrera}
           columns={columns}
           data={coordinador}
           options={options}

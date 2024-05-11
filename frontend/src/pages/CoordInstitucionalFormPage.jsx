@@ -3,24 +3,46 @@ import { Card, Container, Button } from "../components/ui";
 import { useCarreras } from "../context/CarreraContext";
 import { useEffect } from "react";
 import { BasicDatatable } from "../components/tables";
-import { useParams, Link } from "react-router-dom";
-import { updateCoordinador } from "../api/carreras.api";
-import { set } from "zod";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 function CoordInstitucionalFormPage() {
-  const { carrera, coordinadores, loadCoordinadores } = useCarreras();
+  const {
+    carrera,
+    coordinadores,
+    loadCoordinadores,
+    updateCoordinadorCarrera,
+  } = useCarreras();
+  const navigate = useNavigate();
   const [selectedRow, setSelectedRow] = useState(null);
   const { id } = useParams();
   useEffect(() => {
     loadCoordinadores();
   }, []);
 
-  const handleInsertButtonClick = () => {
-    // useEffect(() => {
-    //   updateCoordinador(id, );
-    // }, []);
-    console.log("Insertar coordinador", selectedRow);
+  const handleSelectedRow = (currentRow) => {
+    if (currentRow.length > 0) {
+      setSelectedRow(coordinadores[currentRow[0].dataIndex]);
+    }
   };
+
+  const handleInsertButtonClick = async () => {
+    if (!selectedRow) {
+      console.warn("Ninguna fila seleccionada");
+      return;
+    }
+    const confirmAction = window.confirm(
+      `¿Asignar a ${selectedRow.nombre_empleado} ${selectedRow.apellidos_empleado} como coordinador académico de la carrera ${carrera.nombre_carrera}?`
+    );
+    if (confirmAction) {
+      try {
+        updateCoordinadorCarrera(id, { rfc: selectedRow.rfc });
+        navigate(`/carreras/${id}`, { replace: true });
+      } catch (error) {
+        console.error("Error al asignar coordinador:", error);
+      }
+    }
+  };
+
   const title = "SELECCIONAR COORDINADOR ACADÉMICO";
   const columns = [
     {
@@ -35,25 +57,14 @@ function CoordInstitucionalFormPage() {
       name: "nombre_empleado",
       label: "NOMBRE",
     },
-
-    // {
-    //   name: "actions",
-    //   label: "Acciones",
-    //   options: {
-    //     customBodyRender: (value, tableMeta) => {
-    //       const rowData = tableMeta.rowData;
-    //       return <Link to={`/carreras/${rowData[0]}`}>Ver Detalle</Link>;
-    //     },
-    //   },
-    // },
   ];
 
   const options = {
     selectableRows: "single",
-    onRowsSelectionChange: (row) => setSelectedRow(row),
+    onRowSelectionChange: handleSelectedRow,
     customToolbarSelect: () => {
       return (
-        <Button onClick={handleInsertButtonClick}>Asignar coordinador</Button>
+        <Button onClick={handleInsertButtonClick}>Asignar Coordinador</Button>
       );
     },
 

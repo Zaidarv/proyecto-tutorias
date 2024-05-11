@@ -7,6 +7,7 @@ import {
   checkCoordinador,
   getCoordinador,
   updateCoordinador,
+  createUsuario,
 } from "../api/carreras.api";
 
 const CarreraContext = createContext();
@@ -65,9 +66,16 @@ export const CarreraProvider = ({ children }) => {
       }
     }
   };
+
   const updateCoordinadorCarrera = async (id, data) => {
     const res = await updateCoordinador(id, data);
-    console.log(res.data);
+    if (res.status === 200) {
+      const resusuario = await createUsuario({
+        rfc: data.rfc,
+        status_usuario: 1,
+        id_rol: 2,
+      });
+    }
   };
 
   return (
