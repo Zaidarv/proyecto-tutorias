@@ -3,6 +3,9 @@ import { Routes, Route, Outlet } from "react-router-dom";
 
 import { useAuth } from "./context/AuthContext";
 import { CarreraProvider } from "./context/CarreraContext";
+import { GrupoProvider } from "./context/GrupoContext";
+import { TutorProvider } from "./context/TutorContext";
+import { TutoradoProvider } from "./context/TutoradoContext";
 
 import Navbar from "./components/navbar/Navbar";
 import { Container } from "./components/ui";
@@ -13,6 +16,10 @@ import LoginPage from "./pages/LoginPage";
 import UsuariosPage from "./pages/UsuariosPage";
 import TutoradosPage from "./pages/TutoradosPage";
 import GruposPage from "./pages/GruposPage";
+import GrupoDetailsPage from "./pages/GrupoDetailsPage";
+import GruposFormPage from "./pages/GruposFormPage";
+import TutorSelectList from "./pages/TutorSelectList";
+import TutoradoSelectList from "./pages/TutoradoSelectList";
 import SesionesPage from "./pages/SesionesPage";
 import AsistenciasPage from "./pages/AsistenciasPage";
 import NotFound from "./pages/NotFound";
@@ -43,7 +50,7 @@ function App() {
             element={<ProtectedRoute isAllowed={isAuth} redirectTo="/login" />}
           >
             <Route path="/usuarios" element={<UsuariosPage />} />
-
+            {/* Contexto de las carreras */}
             <Route
               element={
                 <CarreraProvider>
@@ -57,10 +64,48 @@ function App() {
                 path="/carreras/:id/asignar-coordinador"
                 element={<CoordInstitucionalFormPage />}
               />
+              {/* Contexto de los grupos */}
+              <Route
+                element={
+                  <GrupoProvider>
+                    <Outlet />
+                  </GrupoProvider>
+                }
+              >
+                <Route path="/grupos" element={<GruposPage />} />
+                <Route path="/grupos/crear" element={<GruposFormPage />} />
+
+                {/* Contexto de los tutores */}
+                <Route
+                  element={
+                    <TutorProvider>
+                      <Outlet />
+                    </TutorProvider>
+                  }
+                >
+                  <Route path="/grupos/:id" element={<GrupoDetailsPage />} />
+                  <Route
+                    path="/grupos/:id/asignar-tutor"
+                    element={<TutorSelectList />}
+                  />
+                  {/* <Route path="/tutores" element={<TutoresPage />} /> */}
+                </Route>
+                <Route
+                  element={
+                    <TutoradoProvider>
+                      <Outlet />
+                    </TutoradoProvider>
+                  }
+                >
+                  <Route
+                    path="/grupos/:id/asignar-tutorados"
+                    element={<TutoradoSelectList />}
+                  />
+                </Route>
+              </Route>
             </Route>
 
             <Route path="/tutorados" element={<TutoradosPage />} />
-            <Route path="/grupos" element={<GruposPage />} />
             <Route path="/sesiones" element={<SesionesPage />} />
             <Route path="/asistencias" element={<AsistenciasPage />} />
           </Route>

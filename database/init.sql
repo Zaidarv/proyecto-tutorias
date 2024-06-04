@@ -8,14 +8,14 @@ CREATE TABLE roles (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  
 );  
 
-INSERT INTO roles (nombre_rol) VALUES ('Coordinador Institucional'), ('Coordinador Académico'), ('Tutor');
+INSERT INTO roles (nombre_rol) VALUES ('Coordinador Institucional'), ('Coordinador Académico'), ('Tutor'), ('Tutorado');
 
 CREATE TABLE usuarios (
   rfc VARCHAR(15) NOT NULL PRIMARY KEY,
-  clave_area INT NOT NULL,
-  apellidos_usuario VARCHAR(100) NOT NULL,
-  nombre_usuario VARCHAR(100) NOT NULL,
-  status_usuario SMALLINT NOT NULL,
+  clave_area INT NULL,
+  apellidos_usuario VARCHAR(100) NULL,
+  nombre_usuario VARCHAR(100) NULL,
+  status_usuario SMALLINT NULL,
   id_rol INT NULL,
   contrasena VARCHAR(4) NOT NULL DEFAULT '9999',
   FOREIGN KEY (id_rol) REFERENCES roles (id_rol),
@@ -33,8 +33,11 @@ CREATE TABLE coordinadores_carreras (
 
 CREATE TABLE grupos (
   id_grupo SERIAL PRIMARY KEY,
-  rfc VARCHAR(15) NOT NULL,
+  rfc VARCHAR(15) NULL,
+  id_carrera VARCHAR(4) NOT NULL,
+  id_periodo VARCHAR(4) NOT NULL,
   nombre_grupo VARCHAR(10) NOT NULL,
+  cupo INT NOT NULL DEFAULT 30,
   FOREIGN KEY (rfc) REFERENCES usuarios (rfc),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -42,18 +45,25 @@ CREATE TABLE grupos (
 
 CREATE TABLE tutorados (
   no_de_control VARCHAR(11) PRIMARY KEY,
-  carrera INT NOT NULL,
-  semestre INT NOT NULL,
-  apellido_paterno VARCHAR(50) NOT NULL,
-  apellido_materno VARCHAR(50) NOT NULL,
-  nombre_tutorado VARCHAR(100) NOT NULL,
-  periodo_status INT NOT NULL,
-  id_grupo INT NOT NULL,
-  FOREIGN KEY (id_grupo) REFERENCES grupos (id_grupo),
+  carrera INT NULL,
+  semestre INT NULL,
+  apellido_paterno VARCHAR(50) NULL,
+  apellido_materno VARCHAR(50) NULL,
+  nombre_tutorado VARCHAR(100) NULL,
+  periodo_status INT NULL,
+  nip INT NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE grupos_tutorados (
+  id_grupo INT NOT NULL,
+  no_de_control VARCHAR(11) NOT NULL,
+  FOREIGN KEY (id_grupo) REFERENCES grupos (id_grupo),
+  FOREIGN KEY (no_de_control) REFERENCES tutorados (no_de_control),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
 CREATE TABLE sesiones (
   id_sesion SERIAL PRIMARY KEY,

@@ -10,6 +10,6 @@ router.post("/login", validateSchema(loginSchema), login);
 
 router.post("/logout", logout);
 
-router.get("/profile", /*isAuth,*/ profile);
+router.get("/profile", isAuth, profile);
 
 export default router;

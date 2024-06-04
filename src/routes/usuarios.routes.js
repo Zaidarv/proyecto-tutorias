@@ -10,8 +10,8 @@ import { isAuth } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
-router.get("/usuarios", /*isAuth,*/ getAllUsuarios);
-router.get("/usuarios/:id", /*isAuth,*/ getUsuario);
+router.get("/usuarios", isAuth, getAllUsuarios);
+router.get("/usuarios/:id", isAuth, getUsuario);
 router.post("/usuarios", createUsuario);
 router.put("/usuarios/:id", updateUsuario);
 router.delete("/usuarios/:id", deleteUsuario);

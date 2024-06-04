@@ -1,6 +1,7 @@
 import Router from "express-promise-router";
 import {
   getAllGrupos,
+  getGruposPorCarrera,
   getGrupo,
   createGrupo,
   updateGrupo,
@@ -10,6 +11,7 @@ import {
 const router = Router();
 
 router.get("/grupos", getAllGrupos);
+router.get("/grupos/carrera/:id", getGruposPorCarrera);
 router.get("/grupos/:id", getGrupo);
 router.post("/grupos", createGrupo);
 router.put("/grupos/:id", updateGrupo);

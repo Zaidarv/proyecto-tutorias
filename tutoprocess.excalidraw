@@ -127,8 +127,8 @@
     },
     {
       "type": "text",
-      "version": 3254,
-      "versionNonce": 1892033821,
+      "version": 3258,
+      "versionNonce": 1545428152,
       "isDeleted": false,
       "id": "-hvUquaQN9LIk94ic-svy",
       "fillStyle": "solid",
@@ -151,7 +151,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979147,
+      "updated": 1717181126434,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -162,7 +162,7 @@
       "containerId": null,
       "originalText": "coordinador institucional",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "ellipse",
@@ -288,8 +288,8 @@
     },
     {
       "type": "text",
-      "version": 3435,
-      "versionNonce": 32507699,
+      "version": 3439,
+      "versionNonce": 75360968,
       "isDeleted": false,
       "id": "7QzCUaNEoiMJghFRYF9Bi",
       "fillStyle": "solid",
@@ -312,7 +312,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979148,
+      "updated": 1717181126436,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -323,12 +323,12 @@
       "containerId": null,
       "originalText": "coordinador academico",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 528,
-      "versionNonce": 1516075389,
+      "version": 532,
+      "versionNonce": 2059470264,
       "isDeleted": false,
       "id": "j8UajG-18CN1NwHzqcNCJ",
       "fillStyle": "solid",
@@ -348,7 +348,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979150,
+      "updated": 1717181126440,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -359,12 +359,12 @@
       "containerId": null,
       "originalText": "asigna tutores\nasigna tutorados\nasigna PAT (crea grupos de tutores y tutorados)\nVisualiza reportes de tutores y retroalimenta\nPresenta areas de canalizacion (Genera Reporte semestral)\naprueba credito complementario (no se genera)",
       "lineHeight": 1.25,
-      "baseline": 143
+      "baseline": 142
     },
     {
       "type": "text",
-      "version": 257,
-      "versionNonce": 527345875,
+      "version": 261,
+      "versionNonce": 1376080328,
       "isDeleted": false,
       "id": "vTn368oBz5hR7eQrPqGw1",
       "fillStyle": "solid",
@@ -384,7 +384,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979150,
+      "updated": 1717181126440,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -395,7 +395,7 @@
       "containerId": null,
       "originalText": "designa coordinador academico",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "ellipse",
@@ -521,8 +521,8 @@
     },
     {
       "type": "text",
-      "version": 3915,
-      "versionNonce": 1389052381,
+      "version": 3919,
+      "versionNonce": 956796600,
       "isDeleted": false,
       "id": "he0c4yWtKCSArbHR5Yg_-",
       "fillStyle": "solid",
@@ -545,7 +545,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979151,
+      "updated": 1717181126441,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -556,12 +556,12 @@
       "containerId": null,
       "originalText": "tutor",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 1206,
-      "versionNonce": 65541747,
+      "version": 1210,
+      "versionNonce": 1745344712,
       "isDeleted": false,
       "id": "cHixuxmKiVP4SoOt60NZ1",
       "fillStyle": "solid",
@@ -581,7 +581,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979151,
+      "updated": 1717181126442,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -592,7 +592,7 @@
       "containerId": null,
       "originalText": "crea PAT (seguimiento de sesiones)\nreporte periodico\n",
       "lineHeight": 1.25,
-      "baseline": 68
+      "baseline": 67
     },
     {
       "type": "ellipse",
@@ -718,8 +718,8 @@
     },
     {
       "type": "text",
-      "version": 4159,
-      "versionNonce": 522255933,
+      "version": 4163,
+      "versionNonce": 1603598264,
       "isDeleted": false,
       "id": "9nRLjUCJboPpOgbojHY4W",
       "fillStyle": "solid",
@@ -742,7 +742,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979152,
+      "updated": 1717181126442,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -753,12 +753,12 @@
       "containerId": null,
       "originalText": "tutorado",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 1412,
-      "versionNonce": 505597971,
+      "version": 1416,
+      "versionNonce": 1243709384,
       "isDeleted": false,
       "id": "svQ38FB6p-_VuPTppjBCs",
       "fillStyle": "solid",
@@ -778,7 +778,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979152,
+      "updated": 1717181126443,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -789,7 +789,7 @@
       "containerId": null,
       "originalText": "visualiza su grupo y sesiones",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "ellipse",
@@ -915,8 +915,8 @@
     },
     {
       "type": "text",
-      "version": 3631,
-      "versionNonce": 1715482269,
+      "version": 3635,
+      "versionNonce": 42811576,
       "isDeleted": false,
       "id": "6AkS31WXQoCB9ujlLfeoz",
       "fillStyle": "solid",
@@ -939,7 +939,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979153,
+      "updated": 1717181126444,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -950,7 +950,7 @@
       "containerId": null,
       "originalText": "coordinador academico",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "arrow",
@@ -998,8 +998,8 @@
     },
     {
       "type": "text",
-      "version": 239,
-      "versionNonce": 1075140019,
+      "version": 243,
+      "versionNonce": 678315720,
       "isDeleted": false,
       "id": "DqP5C1vL9Wv-3OcVEpEV0",
       "fillStyle": "solid",
@@ -1019,7 +1019,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979153,
+      "updated": 1717181126444,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1030,7 +1030,7 @@
       "containerId": null,
       "originalText": "crea grupos ",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "arrow",
@@ -1082,8 +1082,8 @@
     },
     {
       "type": "text",
-      "version": 220,
-      "versionNonce": 1994019581,
+      "version": 224,
+      "versionNonce": 294939064,
       "isDeleted": false,
       "id": "TID0udj2pqUfQgjSnBo-U",
       "fillStyle": "solid",
@@ -1108,7 +1108,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1714442979153,
+      "updated": 1717181126445,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1119,7 +1119,7 @@
       "containerId": null,
       "originalText": "Asigna tutores",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "arrow",
@@ -1167,8 +1167,8 @@
     },
     {
       "type": "text",
-      "version": 109,
-      "versionNonce": 954607443,
+      "version": 113,
+      "versionNonce": 1334455752,
       "isDeleted": false,
       "id": "4qtn4GKTm_mcbRrqUpm0S",
       "fillStyle": "solid",
@@ -1188,7 +1188,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442979154,
+      "updated": 1717181126445,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1199,7 +1199,7 @@
       "containerId": null,
       "originalText": "asigna tutorados",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "ellipse",

@@ -22,6 +22,7 @@ export function AuthProvider({ children }) {
       const res = await axios.post("/login", data);
       setUser(res.data);
       setIsAuth(true);
+      console.log(res.data);
       return res.data;
     } catch (error) {
       // console.log(error);

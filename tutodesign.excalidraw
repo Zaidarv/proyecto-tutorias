@@ -404,8 +404,8 @@
     },
     {
       "type": "text",
-      "version": 268,
-      "versionNonce": 2093990134,
+      "version": 273,
+      "versionNonce": 75689286,
       "isDeleted": false,
       "id": "lzFQ5jlMJI03Ru7muk_pE",
       "fillStyle": "solid",
@@ -425,7 +425,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874470,
+      "updated": 1717181129076,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -436,12 +436,12 @@
       "containerId": null,
       "originalText": "Alumno",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 324,
-      "versionNonce": 1237414250,
+      "version": 329,
+      "versionNonce": 727839258,
       "isDeleted": false,
       "id": "gR8KU2OumPjTszeY2FsrE",
       "fillStyle": "solid",
@@ -461,7 +461,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874474,
+      "updated": 1717181129077,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -472,7 +472,7 @@
       "containerId": null,
       "originalText": "Docente",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "rectangle",
@@ -607,8 +607,8 @@
     },
     {
       "type": "text",
-      "version": 121,
-      "versionNonce": 1113076278,
+      "version": 126,
+      "versionNonce": 696341638,
       "isDeleted": false,
       "id": "gQjYi4p1YVQ_VebfFUXmM",
       "fillStyle": "solid",
@@ -628,7 +628,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874477,
+      "updated": 1717181129079,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -639,7 +639,7 @@
       "containerId": null,
       "originalText": "Inicio (Coordinador institucional)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "rectangle",
@@ -709,7 +709,7 @@
       "containerId": "r7fDihaWr-gdm2Tr1gyl3",
       "originalText": "Designar coordinadores academicos",
       "lineHeight": 1.25,
-      "baseline": 71
+      "baseline": 70
     },
     {
       "type": "rectangle",
@@ -779,7 +779,7 @@
       "containerId": "EgqPXIi4qs5Ve8-OodSfH",
       "originalText": "Ver reportes",
       "lineHeight": 1.25,
-      "baseline": 21
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -885,8 +885,8 @@
     },
     {
       "type": "text",
-      "version": 412,
-      "versionNonce": 1411626026,
+      "version": 417,
+      "versionNonce": 693149402,
       "isDeleted": false,
       "id": "W6IIPNhMG_vFLfj63c5tb",
       "fillStyle": "solid",
@@ -906,7 +906,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874482,
+      "updated": 1717181129080,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -917,7 +917,7 @@
       "containerId": null,
       "originalText": "Designar coordinadores A. (Coordinador institucional)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -1917,8 +1917,8 @@
     },
     {
       "type": "text",
-      "version": 91,
-      "versionNonce": 943750006,
+      "version": 96,
+      "versionNonce": 1219548102,
       "isDeleted": false,
       "id": "G_Rg3lzczjIYY6kxo9Wui",
       "fillStyle": "solid",
@@ -1938,7 +1938,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874484,
+      "updated": 1717181129080,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1949,7 +1949,7 @@
       "containerId": null,
       "originalText": "Area academica",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -1997,8 +1997,8 @@
     },
     {
       "type": "text",
-      "version": 140,
-      "versionNonce": 1185914602,
+      "version": 145,
+      "versionNonce": 1984672666,
       "isDeleted": false,
       "id": "Mfwgaiofrc20qp8uaKTla",
       "fillStyle": "solid",
@@ -2018,7 +2018,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874485,
+      "updated": 1717181129081,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2029,12 +2029,12 @@
       "containerId": null,
       "originalText": "Coordinador",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 97,
-      "versionNonce": 1959632054,
+      "version": 102,
+      "versionNonce": 741239558,
       "isDeleted": false,
       "id": "9vDs9OWqqGhgiRlYa9DdW",
       "fillStyle": "solid",
@@ -2054,7 +2054,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874490,
+      "updated": 1717181129083,
       "link": null,
       "locked": false,
       "fontSize": 71.8515625,
@@ -2244,8 +2244,8 @@
     },
     {
       "type": "text",
-      "version": 534,
-      "versionNonce": 1039151530,
+      "version": 539,
+      "versionNonce": 1149644890,
       "isDeleted": false,
       "id": "lp76O9UOr8pc1C7mN0E3M",
       "fillStyle": "solid",
@@ -2265,7 +2265,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874491,
+      "updated": 1717181129083,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2276,7 +2276,7 @@
       "containerId": null,
       "originalText": "Designar coordinadores A. (Coordinador institucional)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -3276,8 +3276,8 @@
     },
     {
       "type": "text",
-      "version": 213,
-      "versionNonce": 2107938294,
+      "version": 218,
+      "versionNonce": 1383537222,
       "isDeleted": false,
       "id": "uu1UiVrjmPSzrgwfRrbRK",
       "fillStyle": "solid",
@@ -3297,7 +3297,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874491,
+      "updated": 1717181129084,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3308,7 +3308,7 @@
       "containerId": null,
       "originalText": "Area academica",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -3356,8 +3356,8 @@
     },
     {
       "type": "text",
-      "version": 263,
-      "versionNonce": 219180138,
+      "version": 268,
+      "versionNonce": 131274010,
       "isDeleted": false,
       "id": "Mx1QxSCjkthGwBMZIPtI_",
       "fillStyle": "solid",
@@ -3377,7 +3377,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874492,
+      "updated": 1717181129084,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3388,7 +3388,7 @@
       "containerId": null,
       "originalText": "Coordinador",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "ellipse",
@@ -3566,8 +3566,8 @@
     },
     {
       "type": "text",
-      "version": 3196,
-      "versionNonce": 1539991350,
+      "version": 3201,
+      "versionNonce": 1650975110,
       "isDeleted": false,
       "id": "QlrNzI6tqBLfs9xEZfGOe",
       "fillStyle": "solid",
@@ -3592,7 +3592,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874494,
+      "updated": 1717181129086,
       "link": null,
       "locked": false,
       "fontSize": 12.069673744861225,
@@ -3603,7 +3603,7 @@
       "containerId": null,
       "originalText": "Document",
       "lineHeight": 1.25,
-      "baseline": 11
+      "baseline": 10
     },
     {
       "type": "rectangle",
@@ -3709,8 +3709,8 @@
     },
     {
       "type": "text",
-      "version": 286,
-      "versionNonce": 1775980330,
+      "version": 291,
+      "versionNonce": 1101357530,
       "isDeleted": false,
       "id": "3FH-N1uslsGPEBfVKZqu-",
       "fillStyle": "solid",
@@ -3730,7 +3730,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874495,
+      "updated": 1717181129086,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3741,7 +3741,7 @@
       "containerId": null,
       "originalText": "Inicio (Coordinador académico)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "rectangle",
@@ -3811,7 +3811,7 @@
       "containerId": "y1g3SmMiRf7DWkX_Wxi3e",
       "originalText": "Tutores",
       "lineHeight": 1.25,
-      "baseline": 21
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -3881,7 +3881,7 @@
       "containerId": "wdk63BLMPIzQ5U0LBvHUu",
       "originalText": "Tutorados",
       "lineHeight": 1.25,
-      "baseline": 21
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -3987,8 +3987,8 @@
     },
     {
       "type": "text",
-      "version": 612,
-      "versionNonce": 799281270,
+      "version": 617,
+      "versionNonce": 524140742,
       "isDeleted": false,
       "id": "lqy07KjcZyzxZuVsIF-D8",
       "fillStyle": "solid",
@@ -4008,7 +4008,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874497,
+      "updated": 1717181129087,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4019,7 +4019,7 @@
       "containerId": null,
       "originalText": "Tutores (Coordinador académico)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -5019,8 +5019,8 @@
     },
     {
       "type": "text",
-      "version": 254,
-      "versionNonce": 414964202,
+      "version": 259,
+      "versionNonce": 1292899994,
       "isDeleted": false,
       "id": "TZ3SxhqXLW5kYajNLuu3I",
       "fillStyle": "solid",
@@ -5040,7 +5040,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874498,
+      "updated": 1717181129087,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -5051,7 +5051,7 @@
       "containerId": null,
       "originalText": "Datos",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -5099,8 +5099,8 @@
     },
     {
       "type": "text",
-      "version": 305,
-      "versionNonce": 1157009846,
+      "version": 310,
+      "versionNonce": 1553315846,
       "isDeleted": false,
       "id": "597llEUhwsotTNH24KMLf",
       "fillStyle": "solid",
@@ -5120,7 +5120,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874499,
+      "updated": 1717181129088,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -5131,12 +5131,12 @@
       "containerId": null,
       "originalText": "mas datos",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 254,
-      "versionNonce": 415042730,
+      "version": 259,
+      "versionNonce": 717632346,
       "isDeleted": false,
       "id": "Crgmug3MDm8Kvtti6HY6C",
       "fillStyle": "solid",
@@ -5156,7 +5156,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874499,
+      "updated": 1717181129089,
       "link": null,
       "locked": false,
       "fontSize": 71.8515625,
@@ -5310,12 +5310,12 @@
       "containerId": "dw2oVCXFiU_bXzLy0aYeY",
       "originalText": "Grupos",
       "lineHeight": 1.25,
-      "baseline": 21
+      "baseline": 20
     },
     {
       "type": "text",
-      "version": 840,
-      "versionNonce": 652667638,
+      "version": 845,
+      "versionNonce": 1919731526,
       "isDeleted": false,
       "id": "G8QTj9CpUfRoI7HqGBoIT",
       "fillStyle": "solid",
@@ -5335,7 +5335,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874500,
+      "updated": 1717181129089,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -5346,7 +5346,7 @@
       "containerId": null,
       "originalText": "Tutorados (Coordinador académico)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "rectangle",
@@ -6448,8 +6448,8 @@
     },
     {
       "type": "text",
-      "version": 456,
-      "versionNonce": 1334437738,
+      "version": 461,
+      "versionNonce": 1293596698,
       "isDeleted": false,
       "id": "JuMXrtAhsVp8FsGudYy7J",
       "fillStyle": "solid",
@@ -6469,7 +6469,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874500,
+      "updated": 1717181129089,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -6480,7 +6480,7 @@
       "containerId": null,
       "originalText": "Datos",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -6528,8 +6528,8 @@
     },
     {
       "type": "text",
-      "version": 507,
-      "versionNonce": 872029238,
+      "version": 512,
+      "versionNonce": 824176262,
       "isDeleted": false,
       "id": "pmZmb1TQKPBhZ3ghlfvT8",
       "fillStyle": "solid",
@@ -6549,7 +6549,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874501,
+      "updated": 1717181129090,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -6560,12 +6560,12 @@
       "containerId": null,
       "originalText": "mas datos",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 456,
-      "versionNonce": 896363050,
+      "version": 461,
+      "versionNonce": 1677763802,
       "isDeleted": false,
       "id": "4jQ-fj_PiV5pjxoCk77cF",
       "fillStyle": "solid",
@@ -6585,7 +6585,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874501,
+      "updated": 1717181129090,
       "link": null,
       "locked": false,
       "fontSize": 71.8515625,
@@ -6673,8 +6673,8 @@
     },
     {
       "type": "text",
-      "version": 1100,
-      "versionNonce": 840246646,
+      "version": 1105,
+      "versionNonce": 1433152966,
       "isDeleted": false,
       "id": "S2MswQQMyRwZFXmIFLotK",
       "fillStyle": "solid",
@@ -6694,7 +6694,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874503,
+      "updated": 1717181129091,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -6705,7 +6705,7 @@
       "containerId": null,
       "originalText": "Grupos (Coordinador académico)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "rectangle",
@@ -7807,8 +7807,8 @@
     },
     {
       "type": "text",
-      "version": 690,
-      "versionNonce": 22189290,
+      "version": 695,
+      "versionNonce": 688585114,
       "isDeleted": false,
       "id": "S0_jhEmCaLOXwfaqmmAyK",
       "fillStyle": "solid",
@@ -7828,7 +7828,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874503,
+      "updated": 1717181129092,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -7839,7 +7839,7 @@
       "containerId": null,
       "originalText": "Datos",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -7887,8 +7887,8 @@
     },
     {
       "type": "text",
-      "version": 741,
-      "versionNonce": 1652360886,
+      "version": 746,
+      "versionNonce": 2087617798,
       "isDeleted": false,
       "id": "sQgbWBXkOOHPl6Q8QT5AA",
       "fillStyle": "solid",
@@ -7908,7 +7908,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874504,
+      "updated": 1717181129093,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -7919,12 +7919,12 @@
       "containerId": null,
       "originalText": "mas datos",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 690,
-      "versionNonce": 1422157738,
+      "version": 695,
+      "versionNonce": 728544858,
       "isDeleted": false,
       "id": "CflCkUwjF5zyIPKqO6hun",
       "fillStyle": "solid",
@@ -7944,7 +7944,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874505,
+      "updated": 1717181129093,
       "link": null,
       "locked": false,
       "fontSize": 71.8515625,
@@ -8098,12 +8098,12 @@
       "containerId": "1nb3wXqQYjTgQprs2JMbj",
       "originalText": "Reportes",
       "lineHeight": 1.25,
-      "baseline": 21
+      "baseline": 20
     },
     {
       "type": "text",
-      "version": 1177,
-      "versionNonce": 366395382,
+      "version": 1182,
+      "versionNonce": 396620870,
       "isDeleted": false,
       "id": "6hpiw0FoQk4S01LUr8f1e",
       "fillStyle": "solid",
@@ -8123,7 +8123,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874506,
+      "updated": 1717181129094,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -8134,7 +8134,7 @@
       "containerId": null,
       "originalText": "Reportes (Coordinador académico)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "rectangle",
@@ -9236,8 +9236,8 @@
     },
     {
       "type": "text",
-      "version": 753,
-      "versionNonce": 1743643242,
+      "version": 758,
+      "versionNonce": 469293850,
       "isDeleted": false,
       "id": "onkwOY2Y7lIK59uoptY1H",
       "fillStyle": "solid",
@@ -9257,7 +9257,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874507,
+      "updated": 1717181129095,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -9268,7 +9268,7 @@
       "containerId": null,
       "originalText": "Datos",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -9316,8 +9316,8 @@
     },
     {
       "type": "text",
-      "version": 804,
-      "versionNonce": 1076318518,
+      "version": 809,
+      "versionNonce": 1625914246,
       "isDeleted": false,
       "id": "N4RO8ftTZvV71kJiXAAQE",
       "fillStyle": "solid",
@@ -9337,7 +9337,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874507,
+      "updated": 1717181129096,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -9348,12 +9348,12 @@
       "containerId": null,
       "originalText": "mas datos",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 753,
-      "versionNonce": 899286314,
+      "version": 758,
+      "versionNonce": 421685210,
       "isDeleted": false,
       "id": "I_qVUBIL-Iw2X-r3kgkOd",
       "fillStyle": "solid",
@@ -9373,7 +9373,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874508,
+      "updated": 1717181129096,
       "link": null,
       "locked": false,
       "fontSize": 71.8515625,
@@ -9563,8 +9563,8 @@
     },
     {
       "type": "text",
-      "version": 253,
-      "versionNonce": 215202422,
+      "version": 258,
+      "versionNonce": 1316756166,
       "isDeleted": false,
       "id": "dyoMfzpvdjtHVgHjJvjoW",
       "fillStyle": "solid",
@@ -9584,7 +9584,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874508,
+      "updated": 1717181129097,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -9595,7 +9595,7 @@
       "containerId": null,
       "originalText": "Inicio (Tutores)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "rectangle",
@@ -9665,7 +9665,7 @@
       "containerId": "SOLZ9OH4wxQLoEzIPdktP",
       "originalText": "Grupos",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -9735,7 +9735,7 @@
       "containerId": "0CSm7gOJmC8A78ZU71f_s",
       "originalText": "Sesiones",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -9841,8 +9841,8 @@
     },
     {
       "type": "text",
-      "version": 560,
-      "versionNonce": 657706986,
+      "version": 565,
+      "versionNonce": 2063359130,
       "isDeleted": false,
       "id": "142Iutxl4P8kn27ZtTOSy",
       "fillStyle": "solid",
@@ -9862,7 +9862,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874509,
+      "updated": 1717181129097,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -9873,7 +9873,7 @@
       "containerId": null,
       "originalText": "Grupos (Tutores)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -10873,8 +10873,8 @@
     },
     {
       "type": "text",
-      "version": 204,
-      "versionNonce": 2014892906,
+      "version": 209,
+      "versionNonce": 116969990,
       "isDeleted": false,
       "id": "Z5OAhTmYmmKFoTiE5Hmxv",
       "fillStyle": "solid",
@@ -10894,7 +10894,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442927157,
+      "updated": 1717181129098,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -10905,7 +10905,7 @@
       "containerId": null,
       "originalText": "Grupo",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -10953,8 +10953,8 @@
     },
     {
       "type": "text",
-      "version": 261,
-      "versionNonce": 1357469238,
+      "version": 266,
+      "versionNonce": 523876698,
       "isDeleted": false,
       "id": "V5OQOgq2WSq0xGgSeMt9t",
       "fillStyle": "solid",
@@ -10974,7 +10974,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714443140520,
+      "updated": 1717181129099,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -10985,12 +10985,12 @@
       "containerId": null,
       "originalText": "Tutor y más",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 205,
-      "versionNonce": 1202984182,
+      "version": 210,
+      "versionNonce": 1432133958,
       "isDeleted": false,
       "id": "GGU29kRUoDfSegD-dEt8Y",
       "fillStyle": "solid",
@@ -11010,7 +11010,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714442874510,
+      "updated": 1717181129099,
       "link": null,
       "locked": false,
       "fontSize": 71.8515625,
@@ -11200,8 +11200,8 @@
     },
     {
       "type": "text",
-      "version": 675,
-      "versionNonce": 798679146,
+      "version": 680,
+      "versionNonce": 892173850,
       "isDeleted": false,
       "id": "Ml9xRQTyaLYTjAbwtabAF",
       "fillStyle": "solid",
@@ -11221,7 +11221,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714443153484,
+      "updated": 1717181129100,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -11232,7 +11232,7 @@
       "containerId": null,
       "originalText": "Sesiones (Coordinador institucional)",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -12232,8 +12232,8 @@
     },
     {
       "type": "text",
-      "version": 327,
-      "versionNonce": 39373354,
+      "version": 332,
+      "versionNonce": 486836358,
       "isDeleted": false,
       "id": "X4LlVxCRTgTrv6EpJ_488",
       "fillStyle": "solid",
@@ -12253,7 +12253,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714443157617,
+      "updated": 1717181129100,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -12264,7 +12264,7 @@
       "containerId": null,
       "originalText": "Sesion",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -12312,8 +12312,8 @@
     },
     {
       "type": "text",
-      "version": 378,
-      "versionNonce": 742320874,
+      "version": 383,
+      "versionNonce": 164276954,
       "isDeleted": false,
       "id": "o7xtwk77-xxVF-7AIlS_F",
       "fillStyle": "solid",
@@ -12333,7 +12333,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1714443163973,
+      "updated": 1717181129100,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -12344,7 +12344,7 @@
       "containerId": null,
       "originalText": "Status ",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "ellipse",
@@ -12449,40 +12449,40 @@
       "locked": false
     },
     {
-      "id": "Xenwx5SqzG2ANYLQgGFv0",
       "type": "text",
-      "x": 3385.8593793596588,
-      "y": 3540.4359109319635,
-      "width": 38.67498779296875,
-      "height": 77.36087475650496,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
+      "version": 115,
+      "versionNonce": 1303218118,
+      "isDeleted": false,
+      "id": "Xenwx5SqzG2ANYLQgGFv0",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 3385.8593793596588,
+      "y": 3540.4359109319635,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "width": 38.67498779296875,
+      "height": 77.36087475650496,
+      "seed": 1035017194,
       "groupIds": [],
       "frameId": null,
       "roundness": null,
-      "seed": 1035017194,
-      "version": 110,
-      "versionNonce": 2025411830,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1714443201272,
+      "boundElements": [],
+      "updated": 1717181129102,
       "link": null,
       "locked": false,
-      "text": "+",
       "fontSize": 61.88869980520396,
       "fontFamily": 1,
+      "text": "+",
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 54,
       "containerId": null,
       "originalText": "+",
-      "lineHeight": 1.25
+      "lineHeight": 1.25,
+      "baseline": 54
     }
   ],
   "appState": {

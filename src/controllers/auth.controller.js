@@ -23,6 +23,10 @@ export const login = async (req, res) => {
   return res.json(result.rows[0]);
 };
 
+export const loginTutorado = async (req, res) => {
+  //! Falta implementar
+};
+
 export const logout = async (req, res) => {
   res.clearCookie("token");
   return res.sendStatus(200);

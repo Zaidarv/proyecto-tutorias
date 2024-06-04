@@ -27,17 +27,6 @@ function CarreraPage() {
       name: "nombre_empleado",
       label: "NOMBRE",
     },
-
-    // {
-    //   name: "actions",
-    //   label: "Acciones",
-    //   options: {
-    //     customBodyRender: (value, tableMeta) => {
-    //       const rowData = tableMeta.rowData;
-    //       return <Link to={`/carreras/${rowData[0]}`}>Ver Detalle</Link>;
-    //     },
-    //   },
-    // },
   ];
   const options = {
     selectableRows: "none",

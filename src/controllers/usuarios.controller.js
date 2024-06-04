@@ -31,8 +31,9 @@ export const createUsuario = async (req, res) => {
   } = req.body;
 
   const result = await pool.query(
-    "INSERT INTO public.usuarios (rfc, clave_area, apellidos_usuario, nombre_usuario, status_usuario, id_rol) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-    [rfc, clave_area, apellidos_usuario, nombre_usuario, status_usuario, id_rol]
+    "INSERT INTO public.usuarios (rfc, status_usuario, id_rol) VALUES ($1, $2, $3) ON CONFLICT (rfc) DO UPDATE SET status_usuario = $2, id_rol = $3 RETURNING *",
+
+    [rfc, status_usuario, id_rol]
   );
 
   const token = await createAccessToken({ rfc: result.rows[0].rfc });
