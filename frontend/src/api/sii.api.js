@@ -11,3 +11,9 @@ export const getAlumnosPorCarrera = async (id) =>
 
 export const getAlumno = async (id) =>
   axios.get(`http://localhost:4000/api/alumnos/${id}`);
+
+export const getCarrera = async (id) =>
+  axios.get(`http://localhost:4000/api/carreras/${id}`);
+
+export const getPeriodo = async (id) =>
+  axios.get(`http://localhost:4000/api/periodos/${id}`);

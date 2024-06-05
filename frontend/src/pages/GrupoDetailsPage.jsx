@@ -6,9 +6,13 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BasicDatatable } from "../components/tables";
+import PDF from "../components/PDF/PDF";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFViewer } from "@react-pdf/renderer";
 
 function GrupoDetailsPage() {
-  const { grupo, loadGrupo, tutorados, tutor } = useGrupos();
+  const { grupo, loadGrupo, tutorados, tutor, carreraGrupos, periodo } =
+    useGrupos();
   // const { tutor, loadTutor } = useTutores();
 
   const { id } = useParams();
@@ -92,7 +96,7 @@ function GrupoDetailsPage() {
 
   return (
     <Container className="h-[calc(100vh-10rem)] items-center justify-center">
-      <Card className="p-14">
+      <Card className="">
         <div className="flex items-center">
           <h2 className="text-2xl flex-grow">
             Detalles del grupo{" "}
@@ -112,11 +116,47 @@ function GrupoDetailsPage() {
       ></BasicDatatable>
 
       <Card className="">
-        <div className="flex items-center">
-          {/* <h2 className="text-2xl flex-grow">Tutorados Inscritos </h2> */}
-          <Link to={`/grupos/${id}/asignar-tutorados`}>
+        <div className=" flex items-center">
+          <Link to={`/grupos/${id}/asignar-tutorados`} className="flex-grow">
             <Button>Asignar tutorados</Button>
           </Link>
+          {Object.keys(tutor).length > 0 &&
+            Object.keys(tutorados).length > 0 &&
+            Object.keys(grupo).length > 0 &&
+            Object.keys(carreraGrupos).length > 0 &&
+            Object.keys(periodo).length > 0 && (
+              <>
+                <PDFDownloadLink
+                  document={
+                    <PDF
+                      tutor={tutor}
+                      tutorados={tutorados}
+                      grupo={grupo}
+                      carrera={carreraGrupos}
+                      periodo={periodo}
+                    />
+                  }
+                  fileName="PAT GRUPO.pdf"
+                >
+                  {({ blob, url, loading, error }) =>
+                    loading ? (
+                      "Cargando documento..."
+                    ) : (
+                      <Button>Descargar PAT</Button>
+                    )
+                  }
+                </PDFDownloadLink>
+                <PDFViewer style={{ height: "900px", width: "800px" }}>
+                  <PDF
+                    tutor={tutor}
+                    tutorados={tutorados}
+                    grupo={grupo}
+                    carrera={carreraGrupos}
+                    periodo={periodo}
+                  />
+                </PDFViewer>
+              </>
+            )}
         </div>
       </Card>
 

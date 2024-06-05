@@ -12,7 +12,7 @@ import {
   //   deleteGrupo,
 } from "../api/grupos.api";
 
-import { getAlumno } from "../api/sii.api";
+import { getAlumno, getCarrera, getPeriodo } from "../api/sii.api";
 import { set } from "react-hook-form";
 
 const GrupoContext = createContext();
@@ -31,6 +31,8 @@ export const GrupoProvider = ({ children }) => {
   const [grupo, setGrupo] = useState(null);
   const [tutorados, setTutorados] = useState([]); // [id_tutorado, tutorado
   const [tutor, setTutor] = useState([]);
+  const [tutores, setTutores] = useState([]);
+  const [periodo, setPeriodo] = useState([]); // [id_periodo, periodo
   const [errors, setErrors] = useState(null);
 
   const loadGrupos = async () => {
@@ -44,13 +46,28 @@ export const GrupoProvider = ({ children }) => {
     const res1 = await getCarreraGrupos(id);
     setCarreraGrupos(res1.data);
     const res = await getGruposPorCarrera(res1.data.id_carrera);
+    const rescarrera = await getCarrera(res1.data.id_carrera);
+    // !pendiente de revisar el grupo en conjunto con cada usuarios
+    const gruposDetallesPromises = res.data.map((grupo) => getTutor(grupo.rfc));
+    const gruposDetallesResponses = await Promise.all(gruposDetallesPromises);
+
+    const gruposDetalles = gruposDetallesResponses.flatMap(
+      (response) => response.data
+    );
+
+    const tutoresDetalles = { ...gruposDetalles };
+
+    console.log("GRUPO TUTORES", tutoresDetalles);
+    setTutores(gruposDetalles);
     setGrupos(res.data);
+    setCarreraGrupos(rescarrera.data);
   };
 
   const loadGrupo = async (id) => {
     const res = await getGrupo(id);
     const restutorados = await getTutorados(id);
     const restutor = await getTutor(res.data.rfc);
+    const resperiodo = await getPeriodo(res.data.id_periodo);
 
     const tutoradosDetallesPromises = restutorados.data.map((tutorado) =>
       getAlumno(tutorado.no_de_control)
@@ -62,11 +79,11 @@ export const GrupoProvider = ({ children }) => {
     const tutoradosDetalles = tutoradosDetallesResponses.flatMap(
       (response) => response.data
     );
-    console.log(tutoradosDetalles);
 
     setGrupo(res.data);
     setTutor(restutor.data);
     setTutorados(tutoradosDetalles);
+    setPeriodo(resperiodo.data);
 
     console.log(res.data);
   };
@@ -105,6 +122,8 @@ export const GrupoProvider = ({ children }) => {
         carreraGrupos,
         tutorados,
         tutor,
+        periodo,
+        tutores,
         loadGrupos,
         loadGruposPorCarrera,
         loadGrupo,

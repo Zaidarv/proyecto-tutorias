@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useGrupos } from "../context/GrupoContext";
 import { Button } from "../components/ui";
 import { useAuth } from "../context/AuthContext";
+import { Card } from "../components/ui";
 
 const title = "GRUPOS";
 const columns = [
@@ -95,11 +96,14 @@ function GruposPage() {
 
   return (
     <div>
-      <Link to={`/grupos/crear`}>
-        <Button>Crear Grupo</Button>
-      </Link>
+      <Card>
+        <Link to={`/grupos/crear`}>
+          <Button>Crear Grupo</Button>
+        </Link>
+      </Card>
+
       <BasicDatatable
-        title={title}
+        title={title + " DE " + carreraGrupos.nombre_carrera}
         columns={columns}
         data={grupos}
         options={options}

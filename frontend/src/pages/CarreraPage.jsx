@@ -51,13 +51,13 @@ function CarreraPage() {
         <Link to={`/carreras/${id}/asignar-coordinador`}>
           <Button>Seleccionar coordinador</Button>
         </Link>
-        <BasicDatatable
-          title={title + " DE " + carrera?.nombre_carrera}
-          columns={columns}
-          data={coordinador}
-          options={options}
-        ></BasicDatatable>
       </Card>
+      <BasicDatatable
+        title={title + " DE " + carrera?.nombre_carrera}
+        columns={columns}
+        data={coordinador}
+        options={options}
+      ></BasicDatatable>
     </Container>
   );
 }
