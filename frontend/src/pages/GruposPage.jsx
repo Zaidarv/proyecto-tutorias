@@ -5,6 +5,9 @@ import { useGrupos } from "../context/GrupoContext";
 import { Button } from "../components/ui";
 import { useAuth } from "../context/AuthContext";
 import { Card } from "../components/ui";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFGRUPOS } from "../components/PDF/PDF";
+import { PDFViewer } from "@react-pdf/renderer";
 
 const title = "GRUPOS";
 const columns = [
@@ -85,8 +88,13 @@ const options = {
 };
 
 function GruposPage() {
-  const { grupos, carreraGrupos, loadCarreraGrupos, loadGruposPorCarrera } =
-    useGrupos();
+  const {
+    grupos,
+    carreraGrupos,
+    loadCarreraGrupos,
+    loadGruposPorCarrera,
+    carreraInfo,
+  } = useGrupos();
 
   const { user } = useAuth();
 
@@ -97,13 +105,36 @@ function GruposPage() {
   return (
     <div>
       <Card>
-        <Link to={`/grupos/crear`}>
-          <Button>Crear Grupo</Button>
-        </Link>
+        <div>
+          <Link to={`/grupos/crear`} className=" flex-grow">
+            <Button>Crear Grupo</Button>
+          </Link>
+
+          {Object.keys(grupos).length > 0 &&
+            Object.keys(carreraInfo).length > 0 && (
+              <>
+                <PDFDownloadLink
+                  document={<PDFGRUPOS grupos={grupos} carrera={carreraInfo} />}
+                  fileName="PAT GRUPOS.pdf"
+                >
+                  {({ blob, url, loading, error }) =>
+                    loading ? (
+                      "Cargando documento..."
+                    ) : (
+                      <Button>Descargar PAT</Button>
+                    )
+                  }
+                </PDFDownloadLink>
+                {/* <PDFViewer style={{ height: "900px", width: "800px" }}>
+                <PDFGRUPOS grupos={grupos} carrera={carreraInfo} />
+              </PDFViewer> */}
+              </>
+            )}
+        </div>
       </Card>
 
       <BasicDatatable
-        title={title + " DE " + carreraGrupos.nombre_carrera}
+        title={title + " DE " + carreraInfo.nombre_carrera}
         columns={columns}
         data={grupos}
         options={options}

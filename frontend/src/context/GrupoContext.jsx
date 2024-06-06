@@ -28,6 +28,7 @@ export const useGrupos = () => {
 export const GrupoProvider = ({ children }) => {
   const [grupos, setGrupos] = useState([]);
   const [carreraGrupos, setCarreraGrupos] = useState([]); // [id_carrera, grupos
+  const [carreraInfo, setCarreraInfo] = useState([]); // [id_carrera, carrera
   const [grupo, setGrupo] = useState(null);
   const [tutorados, setTutorados] = useState([]); // [id_tutorado, tutorado
   const [tutor, setTutor] = useState([]);
@@ -42,25 +43,45 @@ export const GrupoProvider = ({ children }) => {
     // console.log(res.data);
   };
 
+  // const loadGruposPorCarrera = async (id) => {
+  //   const res1 = await getCarreraGrupos(id);
+  //   const res = await getGruposPorCarrera(res1.data.id_carrera);
+  //   const rescarrera = await getCarrera(res1.data.id_carrera);
+
+  //   setCarreraGrupos(res1.data);
+  //   setGrupos(res.data);
+  //   setCarreraInfo(rescarrera.data);
+  // };
+
   const loadGruposPorCarrera = async (id) => {
-    const res1 = await getCarreraGrupos(id);
-    setCarreraGrupos(res1.data);
-    const res = await getGruposPorCarrera(res1.data.id_carrera);
-    const rescarrera = await getCarrera(res1.data.id_carrera);
-    // !pendiente de revisar el grupo en conjunto con cada usuarios
-    const gruposDetallesPromises = res.data.map((grupo) => getTutor(grupo.rfc));
-    const gruposDetallesResponses = await Promise.all(gruposDetallesPromises);
+    try {
+      // Obtén los datos de los grupos y la carrera
+      const res1 = await getCarreraGrupos(id);
+      const res = await getGruposPorCarrera(res1.data.id_carrera);
+      const rescarrera = await getCarrera(res1.data.id_carrera);
 
-    const gruposDetalles = gruposDetallesResponses.flatMap(
-      (response) => response.data
-    );
+      // Inicializa un array para almacenar los grupos con datos del tutor
+      const gruposConTutor = await Promise.all(
+        res.data.map(async (grupo) => {
+          if (grupo.rfc) {
+            // Si el grupo tiene un RFC, obtén los datos del tutor
+            const resTutor = await getTutor(grupo.rfc);
+            console.log({ ...grupo, tutor: resTutor.data });
+            return { ...grupo, tutor: resTutor.data };
+          } else {
+            // Si no tiene RFC, devuelve el grupo tal cual
+            return { ...grupo, tutor: null };
+          }
+        })
+      );
 
-    const tutoresDetalles = { ...gruposDetalles };
-
-    console.log("GRUPO TUTORES", tutoresDetalles);
-    setTutores(gruposDetalles);
-    setGrupos(res.data);
-    setCarreraGrupos(rescarrera.data);
+      // Actualiza los estados
+      setCarreraGrupos(res1.data);
+      setGrupos(gruposConTutor); // Aquí actualizas el estado con los datos del tutor
+      setCarreraInfo(rescarrera.data);
+    } catch (error) {
+      console.error("Error al cargar los datos de los grupos:", error);
+    }
   };
 
   const loadGrupo = async (id) => {
@@ -89,16 +110,20 @@ export const GrupoProvider = ({ children }) => {
   };
 
   const loadCreateGrupo = async (data) => {
+    console.log("Data", data);
     try {
       const periodos = await getPeriodosEscolares();
       const periodoActual = periodos.data[0].periodo;
+      console.log("Periodo actual", periodoActual);
+      console.log("Data", data);
+      console.log("Carrera", carreraGrupos.id_carrera);
       const res = await createGrupo({
         nombre_grupo: data.nombre_grupo,
         id_carrera: carreraGrupos.id_carrera,
         id_periodo: periodoActual,
       });
-      setGrupo(res.data);
-      console.log(res.data);
+      console.log("Grupo creado", res.data);
+      setGrupo(res.data.grupo);
       return res.data;
     } catch (error) {
       if (Array.isArray(error.response.data)) {
@@ -120,6 +145,7 @@ export const GrupoProvider = ({ children }) => {
         grupos,
         grupo,
         carreraGrupos,
+        carreraInfo,
         tutorados,
         tutor,
         periodo,

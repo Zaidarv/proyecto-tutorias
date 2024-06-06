@@ -6,13 +6,20 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BasicDatatable } from "../components/tables";
-import PDF from "../components/PDF/PDF";
+import { PDF } from "../components/PDF/PDF";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import { PDFViewer } from "@react-pdf/renderer";
 
 function GrupoDetailsPage() {
-  const { grupo, loadGrupo, tutorados, tutor, carreraGrupos, periodo } =
-    useGrupos();
+  const {
+    grupo,
+    loadGrupo,
+    tutorados,
+    tutor,
+    carreraGrupos,
+    periodo,
+    carreraInfo,
+  } = useGrupos();
   // const { tutor, loadTutor } = useTutores();
 
   const { id } = useParams();
@@ -123,7 +130,7 @@ function GrupoDetailsPage() {
           {Object.keys(tutor).length > 0 &&
             Object.keys(tutorados).length > 0 &&
             Object.keys(grupo).length > 0 &&
-            Object.keys(carreraGrupos).length > 0 &&
+            Object.keys(carreraInfo).length > 0 &&
             Object.keys(periodo).length > 0 && (
               <>
                 <PDFDownloadLink
@@ -132,7 +139,7 @@ function GrupoDetailsPage() {
                       tutor={tutor}
                       tutorados={tutorados}
                       grupo={grupo}
-                      carrera={carreraGrupos}
+                      carrera={carreraInfo}
                       periodo={periodo}
                     />
                   }
@@ -146,7 +153,7 @@ function GrupoDetailsPage() {
                     )
                   }
                 </PDFDownloadLink>
-                <PDFViewer style={{ height: "900px", width: "800px" }}>
+                {/* <PDFViewer style={{ height: "900px", width: "800px" }}>
                   <PDF
                     tutor={tutor}
                     tutorados={tutorados}
@@ -154,7 +161,7 @@ function GrupoDetailsPage() {
                     carrera={carreraGrupos}
                     periodo={periodo}
                   />
-                </PDFViewer>
+                </PDFViewer> */}
               </>
             )}
         </div>

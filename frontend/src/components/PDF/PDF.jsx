@@ -68,8 +68,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function PDF({ tutor, tutorados, grupo, carrera, periodo }) {
-  console.log();
+export function PDF({ tutor, tutorados, grupo, carrera, periodo }) {
   return (
     <Document>
       <Page style={styles.page}>
@@ -119,4 +118,51 @@ function PDF({ tutor, tutorados, grupo, carrera, periodo }) {
   );
 }
 
-export default PDF;
+export function PDFGRUPOS({ grupos, carrera }) {
+  return (
+    <Document>
+      <Page style={styles.page}>
+        <View style={styles.image}>
+          <Image src={headerPDF} />
+        </View>
+        <View style={styles.section}>
+          <Text style={[styles.text]}>
+            RELACIÓN DE TUTORES Y GRUPOS DE LA {carrera.nombre_carrera}, QUE
+            IMPARTIRÁN TUTORÍAS EN EL SEMESTRE ESCOLAR AGO-DIC 2021.
+          </Text>
+
+          <View style={styles.table}>
+            <View style={[styles.row, styles.header, styles.bold]}>
+              <Text style={[styles.col1]}>#</Text>
+              <Text style={[styles.col2]}>NOMBRE DEL TUTOR:</Text>
+              <Text style={[styles.col3]}>GRUPO</Text>
+            </View>
+
+            {grupos.map((row, i) => (
+              <View key={i} style={styles.row} wrap={false}>
+                <Text style={styles.col1}>{i + 1}</Text>
+                <Text style={styles.col2}>
+                  <Text style={styles.bold}>
+                    {row.tutor ? (
+                      <Text style={styles.bold}>
+                        {row.tutor[0].apellidos_empleado}{" "}
+                        {row.tutor[0].nombre_empleado}
+                      </Text>
+                    ) : (
+                      "Sin tutor asignado"
+                    )}
+                  </Text>
+                </Text>
+                <Text style={styles.col3}>{row.nombre_grupo}</Text>
+              </View>
+            ))}
+          </View>
+        </View>
+
+        <View style={styles.image}>
+          <Image src={footerPDF} />
+        </View>
+      </Page>
+    </Document>
+  );
+}

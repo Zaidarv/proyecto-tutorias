@@ -19,8 +19,9 @@ function GruposFormPage() {
 
   const onSubmit = handleSubmit(async (data) => {
     const grupo = await loadCreateGrupo(data);
+    console.log("GRUPO", grupo);
     if (grupo) {
-      navigate(`/grupos/${grupo.id_grupo}`);
+      navigate(`/grupos/`);
     }
   });
 
