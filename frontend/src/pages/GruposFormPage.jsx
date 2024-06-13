@@ -34,7 +34,7 @@ function GruposFormPage() {
             role="alert"
           >
             <strong className="font-bold">Error!</strong>
-            <span className="block sm:inline"> {loginErrors[0]}</span>
+            <span className="block sm:inline"> {gruposErrors[0]}</span>
           </div>
         )}
         <h3 className="text-2xl font-bold">Nuevo Grupo</h3>

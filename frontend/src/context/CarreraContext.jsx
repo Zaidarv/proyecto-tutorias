@@ -31,7 +31,7 @@ export const CarreraProvider = ({ children }) => {
   const loadCarreras = async () => {
     const res = await getAllCarreras();
     setCarreras(res.data);
-    // console.log(res.data);
+    console.log(res.data);
   };
 
   const loadCarrera = async (id) => {

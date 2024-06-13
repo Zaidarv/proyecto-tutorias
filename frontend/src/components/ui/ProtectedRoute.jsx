@@ -1,7 +1,14 @@
 import { Navigate, Outlet } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+export const ProtectedRoute = ({
+  redirectTo,
+  isAllowed,
+  allowedRoles,
+  children,
+}) => {
+  const { user } = useAuth();
 
-export const ProtectedRoute = ({ redirectTo, isAllowed, children }) => {
-  if (!isAllowed) {
+  if (!isAllowed || (allowedRoles && !allowedRoles.includes(user?.id_rol))) {
     return <Navigate to={redirectTo} replace />;
   }
 

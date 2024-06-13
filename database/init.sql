@@ -65,6 +65,8 @@ CREATE TABLE grupos_tutorados (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
+
 CREATE TABLE sesiones (
   id_sesion SERIAL PRIMARY KEY,
   id_grupo INT NOT NULL,

@@ -14,6 +14,14 @@ export const getGruposPorCarrera = async (req, res) => {
   return res.json(result.rows);
 };
 
+export const getGrupoDeTutor = async (req, res) => {
+  const result = await pool.query(
+    "SELECT * FROM public.grupos where rfc = $1",
+    [req.params.rfc]
+  );
+  return res.json(result.rows);
+};
+
 export const getGrupo = async (req, res) => {
   const id = req.params.id;
   const result = await pool.query(

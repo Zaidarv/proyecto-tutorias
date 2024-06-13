@@ -6,6 +6,7 @@ import { CarreraProvider } from "./context/CarreraContext";
 import { GrupoProvider } from "./context/GrupoContext";
 import { TutorProvider } from "./context/TutorContext";
 import { TutoradoProvider } from "./context/TutoradoContext";
+import { SesionProvider } from "./context/SesionContext";
 
 import Navbar from "./components/navbar/Navbar";
 import { Container } from "./components/ui";
@@ -21,6 +22,7 @@ import GruposFormPage from "./pages/GruposFormPage";
 import TutorSelectList from "./pages/TutorSelectList";
 import TutoradoSelectList from "./pages/TutoradoSelectList";
 import SesionesPage from "./pages/SesionesPage";
+import SesionesFormPage from "./pages/SesionesFormPage";
 import AsistenciasPage from "./pages/AsistenciasPage";
 import NotFound from "./pages/NotFound";
 import CoordInstitucionalPage from "./pages/CoordInstitucionalPage";
@@ -58,7 +60,18 @@ function App() {
                 </CarreraProvider>
               }
             >
-              <Route path="/carreras" element={<CoordInstitucionalPage />} />
+              <Route
+                path="/carreras"
+                element={
+                  <ProtectedRoute
+                    isAllowed={isAuth}
+                    allowedRoles={[1]}
+                    redirectTo="/login"
+                  >
+                    <CoordInstitucionalPage />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="/carreras/:id" element={<CarreraPage />} />
               <Route
                 path="/carreras/:id/asignar-coordinador"
@@ -72,7 +85,18 @@ function App() {
                   </GrupoProvider>
                 }
               >
-                <Route path="/grupos" element={<GruposPage />} />
+                <Route
+                  path="/grupos"
+                  element={
+                    <ProtectedRoute
+                      isAllowed={isAuth}
+                      allowedRoles={[2]}
+                      redirectTo="/login"
+                    >
+                      <GruposPage />
+                    </ProtectedRoute>
+                  }
+                />
                 <Route path="/grupos/crear" element={<GruposFormPage />} />
 
                 {/* Contexto de los tutores */}
@@ -106,7 +130,27 @@ function App() {
             </Route>
 
             <Route path="/tutorados" element={<TutoradosPage />} />
-            <Route path="/sesiones" element={<SesionesPage />} />
+            <Route
+              element={
+                <SesionProvider>
+                  <Outlet />
+                </SesionProvider>
+              }
+            >
+              <Route
+                path="/sesiones"
+                element={
+                  <ProtectedRoute
+                    isAllowed={isAuth}
+                    allowedRoles={[3]}
+                    redirectTo="/login"
+                  >
+                    <SesionesPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/sesiones/crear" element={<SesionesFormPage />} />
+            </Route>
             <Route path="/asistencias" element={<AsistenciasPage />} />
           </Route>
 

@@ -2,7 +2,15 @@ import { pool } from "../db.js";
 import { createAccessToken } from "../libs/jwt.js";
 
 export const getAllSesiones = async (req, res) => {
-  const result = await pool.query("SELECT * FROM public.sesiones  ");
+  const result = await pool.query("SELECT * FROM public.sesiones ");
+  return res.json(result.rows);
+};
+
+export const getSesionesPorGrupo = async (req, res) => {
+  const result = await pool.query(
+    "SELECT *, TO_CHAR(fecha, 'DD/MM/YYYY') AS fecha_sesion, TO_CHAR(hora, 'HH24:MI') AS hora_sesion  FROM public.sesiones where id_grupo = $1",
+    [req.params.id]
+  );
   return res.json(result.rows);
 };
 

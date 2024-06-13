@@ -3,7 +3,7 @@ import { useAuth } from "../context/AuthContext";
 
 function InicioPage() {
   const data = useAuth();
-  // console.log(data);
+  console.log(data);
 
   return (
     <div>

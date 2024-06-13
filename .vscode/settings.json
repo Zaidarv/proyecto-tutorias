@@ -19,5 +19,13 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.color": "#215732",
-  "cSpell.ignoreWords": ["rescarrera", "resperiodo", "restutor", "restutorados"]
+  "cSpell.ignoreWords": [
+    "SESION",
+    "Sesion",
+    "rescarrera",
+    "resperiodo",
+    "restutor",
+    "restutorados",
+    "sesion"
+  ]
 }
